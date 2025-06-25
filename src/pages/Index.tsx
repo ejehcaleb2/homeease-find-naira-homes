@@ -5,8 +5,9 @@ import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
 import FeaturedListings from '@/components/FeaturedListings';
 import Benefits from '@/components/Benefits';
-import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { Search } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -16,7 +17,38 @@ const Index = () => {
       <HowItWorks />
       <FeaturedListings />
       <Benefits />
-      <Testimonials />
+      
+      {/* Call to Action Section - Replacing the green background */}
+      <section className="py-20 bg-gradient-primary">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Find Your Perfect Home?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Join thousands of Nigerians who have found their ideal homes without agent fees. 
+            Start your search today and experience the difference.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-50 px-8 py-3 text-lg font-semibold"
+              onClick={() => window.location.href = '/listings'}
+            >
+              <Search className="w-5 h-5 mr-2" />
+              Browse Homes
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
+              onClick={() => window.location.href = '/register'}
+            >
+              Join HomeEase
+            </Button>
+          </div>
+        </div>
+      </section>
+      
       <Footer />
       
       {/* WhatsApp Floating Button */}
