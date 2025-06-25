@@ -45,6 +45,42 @@ const FeaturedListings = () => {
       area: "35 sqm",
       tag: "Affordable",
       isAvailable: true
+    },
+    {
+      id: 4,
+      title: "Luxury 3-Bedroom Duplex",
+      location: "Ikoyi, Lagos",
+      price: "₦350,000",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
+      bedrooms: 3,
+      bathrooms: 3,
+      area: "120 sqm",
+      tag: "Premium",
+      isAvailable: true
+    },
+    {
+      id: 5,
+      title: "Executive 2-Bedroom Flat",
+      location: "Magodo, Lagos",
+      price: "₦165,000",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
+      bedrooms: 2,
+      bathrooms: 2,
+      area: "78 sqm",
+      tag: "Executive",
+      isAvailable: true
+    },
+    {
+      id: 6,
+      title: "Modern Studio in Abuja",
+      location: "Wuse 2, Abuja",
+      price: "₦140,000",
+      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=300&fit=crop",
+      bedrooms: 1,
+      bathrooms: 1,
+      area: "55 sqm",
+      tag: "Modern",
+      isAvailable: true
     }
   ];
 
