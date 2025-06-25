@@ -26,17 +26,17 @@ const Hero = () => {
   return (
     <section className="relative bg-gradient-light overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-white/50"></div>
-      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/10 rounded-full -translate-y-16 translate-x-16 md:-translate-y-32 md:translate-x-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-secondary/10 rounded-full translate-y-16 -translate-x-8 md:translate-y-32 md:-translate-x-16"></div>
+      <div className="absolute inset-0 bg-white/70"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full -translate-y-16 translate-x-16 md:-translate-y-32 md:translate-x-32"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-secondary/5 rounded-full translate-y-16 -translate-x-8 md:translate-y-32 md:-translate-x-16"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-28">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-28">
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 animate-fade-in-up leading-tight">
             Affordable homes. <br />
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Zero stress.</span>
+            <span className="bg-gradient-primary bg-clip-text text-transparent font-bold">Zero stress.</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in-up px-4" style={{animationDelay: '0.2s'}}>
+          <p className="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in-up px-4 font-medium" style={{animationDelay: '0.2s'}}>
             HomeEase helps you find real, verified rental homes in Nigeria—without agent fees.
             Connect directly with landlords and find your perfect home today.
           </p>
