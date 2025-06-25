@@ -24,17 +24,16 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-light overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-white/70"></div>
-      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full -translate-y-16 translate-x-16 md:-translate-y-32 md:translate-x-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-secondary/5 rounded-full translate-y-16 -translate-x-8 md:translate-y-32 md:-translate-x-16"></div>
+    <section className="relative bg-white overflow-hidden">
+      {/* Subtle background decoration */}
+      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-blue-50 rounded-full -translate-y-16 translate-x-16 md:-translate-y-32 md:translate-x-32"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-green-50 rounded-full translate-y-16 -translate-x-8 md:translate-y-32 md:-translate-x-16"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-28">
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 animate-fade-in-up leading-tight">
             Affordable homes. <br />
-            <span className="bg-gradient-primary bg-clip-text text-transparent font-bold">Zero stress.</span>
+            <span className="text-transparent bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text font-bold">Zero stress.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in-up px-4 font-medium" style={{animationDelay: '0.2s'}}>
             HomeEase helps you find real, verified rental homes in Nigeria—without agent fees.
@@ -90,7 +89,7 @@ const Hero = () => {
 
               <Button 
                 onClick={handleSearch}
-                className="h-12 bg-gradient-primary hover:opacity-90 text-white font-semibold text-sm md:text-base"
+                className="h-12 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold text-sm md:text-base"
               >
                 <Search className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                 <span className="hidden sm:inline">Search Homes</span>
@@ -103,15 +102,15 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 text-center animate-fade-in-up px-4" style={{animationDelay: '0.6s'}}>
           <div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-2">500+</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-2">500+</div>
             <div className="text-sm md:text-base text-gray-600">Verified Listings</div>
           </div>
           <div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-2">1,200+</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-2">1,200+</div>
             <div className="text-sm md:text-base text-gray-600">Happy Tenants</div>
           </div>
           <div className="col-span-2 md:col-span-1">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-2">0%</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-2">0%</div>
             <div className="text-sm md:text-base text-gray-600">Agent Fees</div>
           </div>
         </div>
