@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -71,7 +70,7 @@ const PropertyDetails = () => {
       email: "adebayo@example.com",
       verified: true
     },
-    coordinates: [3.4219, 6.4474] // Lagos coordinates
+    coordinates: [3.4219, 6.4474] as [number, number] // Lagos coordinates - explicitly typed as tuple
   };
 
   const handleContactSubmit = (e: React.FormEvent) => {
