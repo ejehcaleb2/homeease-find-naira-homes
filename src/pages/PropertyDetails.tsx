@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -82,7 +83,7 @@ const PropertyDetails = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ backgroundColor: '#E4E1B6' }}>
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -90,7 +91,7 @@ const PropertyDetails = () => {
         <Button 
           variant="outline" 
           onClick={() => navigate(-1)}
-          className="mb-6 border-primary text-primary hover:bg-primary hover:text-white"
+          className="mb-6 border-[#0C2A28] text-[#0C2A28] hover:bg-[#0C2A28] hover:text-[#E4E1B6]"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Listings
@@ -108,7 +109,7 @@ const PropertyDetails = () => {
                 />
                 <Button 
                   size="sm"
-                  className="absolute top-4 right-4 bg-white/90 text-gray-900 hover:bg-white"
+                  className="absolute top-4 right-4 bg-[#E4E1B6]/90 text-[#0C2A28] hover:bg-[#E4E1B6] border border-[#0C2A28]"
                 >
                   <Share className="w-4 h-4 mr-2" />
                   Share
@@ -134,7 +135,7 @@ const PropertyDetails = () => {
                 src={image} 
                 alt={`${property.title} ${index + 1}`}
                 className={`w-20 h-16 object-cover rounded cursor-pointer transition-all ${
-                  selectedImage === index ? 'ring-2 ring-primary' : 'hover:opacity-80'
+                  selectedImage === index ? 'ring-2 ring-[#0C2A28]' : 'hover:opacity-80'
                 }`}
                 onClick={() => setSelectedImage(index)}
               />
@@ -146,27 +147,27 @@ const PropertyDetails = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
             {/* Property Header */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">{property.title}</h1>
-                    <div className="flex items-center text-gray-600 mb-4">
+                    <h1 className="text-3xl font-bold text-[#0C2A28] mb-2">{property.title}</h1>
+                    <div className="flex items-center text-[#0C2A28] mb-4">
                       <MapPin className="w-5 h-5 mr-2" />
                       <span className="text-lg">{property.address}</span>
                     </div>
                   </div>
-                  <button className="p-2 rounded-full hover:bg-gray-100 transition-colors">
-                    <Heart className="w-6 h-6 text-gray-400 hover:text-red-500" />
+                  <button className="p-2 rounded-full hover:bg-[#E4E1B6] transition-colors">
+                    <Heart className="w-6 h-6 text-[#CD5B43] hover:text-[#CD5B43]" />
                   </button>
                 </div>
                 
                 <div className="flex items-center justify-between mb-6">
-                  <div className="text-3xl font-bold text-primary">
+                  <div className="text-3xl font-bold text-[#CD5B43]">
                     ₦{property.price.toLocaleString()}
-                    <span className="text-lg text-gray-600 font-normal">/month</span>
+                    <span className="text-lg text-[#0C2A28] font-normal">/month</span>
                   </div>
-                  <div className="flex space-x-6 text-gray-600">
+                  <div className="flex space-x-6 text-[#0C2A28]">
                     <div className="flex items-center">
                       <Bed className="w-5 h-5 mr-2" />
                       <span>{property.bedrooms} Beds</span>
@@ -182,41 +183,41 @@ const PropertyDetails = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-[#E4E1B6] rounded-lg">
                   <div>
-                    <span className="text-sm text-gray-600">Property Type</span>
-                    <p className="font-semibold">{property.propertyType}</p>
+                    <span className="text-sm text-[#0C2A28]">Property Type</span>
+                    <p className="font-semibold text-[#0C2A28]">{property.propertyType}</p>
                   </div>
                   <div>
-                    <span className="text-sm text-gray-600">Year Built</span>
-                    <p className="font-semibold">{property.yearBuilt}</p>
+                    <span className="text-sm text-[#0C2A28]">Year Built</span>
+                    <p className="font-semibold text-[#0C2A28]">{property.yearBuilt}</p>
                   </div>
                   <div>
-                    <span className="text-sm text-gray-600">Area</span>
-                    <p className="font-semibold">{property.area}</p>
+                    <span className="text-sm text-[#0C2A28]">Area</span>
+                    <p className="font-semibold text-[#0C2A28]">{property.area}</p>
                   </div>
                   <div>
-                    <span className="text-sm text-gray-600">Status</span>
-                    <Badge className="bg-green-100 text-green-800">Available</Badge>
+                    <span className="text-sm text-[#0C2A28]">Status</span>
+                    <Badge className="bg-[#CD5B43] text-white">Available</Badge>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Description */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardHeader>
-                <CardTitle>Description</CardTitle>
+                <CardTitle className="text-[#0C2A28]">Description</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 leading-relaxed">{property.description}</p>
+                <p className="text-[#0C2A28] leading-relaxed">{property.description}</p>
               </CardContent>
             </Card>
 
             {/* Features & Amenities */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardHeader>
-                <CardTitle>Features & Amenities</CardTitle>
+                <CardTitle className="text-[#0C2A28]">Features & Amenities</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
@@ -224,7 +225,7 @@ const PropertyDetails = () => {
                     <div 
                       key={name}
                       className={`flex items-center p-3 rounded-lg ${
-                        available ? 'bg-green-50 text-green-700' : 'bg-gray-50 text-gray-400'
+                        available ? 'bg-[#CD5B43] text-white' : 'bg-[#E4E1B6] text-[#0C2A28]'
                       }`}
                     >
                       <Icon className="w-5 h-5 mr-3" />
@@ -234,12 +235,12 @@ const PropertyDetails = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-900">Additional Features:</h4>
+                  <h4 className="font-semibold text-[#0C2A28]">Additional Features:</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {property.features.map((feature, index) => (
                       <div key={index} className="flex items-center">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                        <span className="text-gray-700">{feature}</span>
+                        <div className="w-2 h-2 bg-[#CD5B43] rounded-full mr-3"></div>
+                        <span className="text-[#0C2A28]">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -248,15 +249,15 @@ const PropertyDetails = () => {
             </Card>
 
             {/* Map */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardHeader>
-                <CardTitle>Location</CardTitle>
+                <CardTitle className="text-[#0C2A28]">Location</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="h-96 rounded-lg overflow-hidden">
                   <Map coordinates={property.coordinates} address={property.address} />
                 </div>
-                <p className="text-gray-600 mt-4">{property.address}</p>
+                <p className="text-[#0C2A28] mt-4">{property.address}</p>
               </CardContent>
             </Card>
           </div>
@@ -264,18 +265,18 @@ const PropertyDetails = () => {
           {/* Contact Sidebar */}
           <div className="space-y-6">
             {/* Owner Info */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardHeader>
-                <CardTitle>Property Owner</CardTitle>
+                <CardTitle className="text-[#0C2A28]">Property Owner</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                  <div className="w-16 h-16 bg-[#0C2A28] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">
                     {property.owner.name.charAt(0)}
                   </div>
-                  <h3 className="font-semibold text-lg">{property.owner.name}</h3>
+                  <h3 className="font-semibold text-lg text-[#0C2A28]">{property.owner.name}</h3>
                   {property.owner.verified && (
-                    <Badge className="bg-green-100 text-green-800 mt-2">
+                    <Badge className="bg-[#CD5B43] text-white mt-2">
                       Verified Owner
                     </Badge>
                   )}
@@ -284,7 +285,7 @@ const PropertyDetails = () => {
                 <div className="space-y-3">
                   <Button 
                     variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    className="w-full border-[#0C2A28] text-[#0C2A28] hover:bg-[#0C2A28] hover:text-white"
                     onClick={() => window.open(`tel:${property.owner.phone}`)}
                   >
                     <Phone className="w-4 h-4 mr-2" />
@@ -293,7 +294,7 @@ const PropertyDetails = () => {
                   
                   <Button 
                     variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    className="w-full border-[#0C2A28] text-[#0C2A28] hover:bg-[#0C2A28] hover:text-white"
                     onClick={() => window.open(`mailto:${property.owner.email}`)}
                   >
                     <Mail className="w-4 h-4 mr-2" />
@@ -304,9 +305,9 @@ const PropertyDetails = () => {
             </Card>
 
             {/* Contact Form */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardHeader>
-                <CardTitle>Send Message</CardTitle>
+                <CardTitle className="text-[#0C2A28]">Send Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleContactSubmit} className="space-y-4">
@@ -315,6 +316,7 @@ const PropertyDetails = () => {
                     value={contactForm.name}
                     onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
                     required
+                    className="border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60"
                   />
                   <Input
                     type="email"
@@ -322,23 +324,25 @@ const PropertyDetails = () => {
                     value={contactForm.email}
                     onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
                     required
+                    className="border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60"
                   />
                   <Input
                     type="tel"
                     placeholder="Your Phone"
                     value={contactForm.phone}
                     onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
+                    className="border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60"
                   />
                   <Textarea
                     placeholder="Your message..."
                     value={contactForm.message}
                     onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                    className="min-h-[100px]"
+                    className="min-h-[100px] border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60"
                     required
                   />
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    className="w-full bg-[#CD5B43] hover:bg-[#CD5B43]/90 text-white"
                   >
                     Send Message
                   </Button>
@@ -347,17 +351,17 @@ const PropertyDetails = () => {
             </Card>
 
             {/* Quick Actions */}
-            <Card>
+            <Card className="bg-white border-[#0C2A28]">
               <CardContent className="p-4">
                 <div className="space-y-3">
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold text-lg py-6"
+                    className="w-full bg-[#CD5B43] hover:bg-[#CD5B43]/90 text-white font-semibold text-lg py-6"
                   >
                     Schedule Viewing
                   </Button>
                   <Button 
                     variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                    className="w-full border-[#0C2A28] text-[#0C2A28] hover:bg-[#0C2A28] hover:text-white"
                   >
                     Add to Favorites
                   </Button>
