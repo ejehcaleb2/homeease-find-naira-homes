@@ -5,48 +5,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Real Estate Design System */
+/* Professional Real Estate Design System */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 180 20% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 180 20% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 180 20% 8%;
 
-    --primary: 45 100% 51%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 180 59% 11%;
+    --primary-foreground: 45 42% 89%;
 
-    --secondary: 28 100% 52%;
+    --secondary: 12 61% 52%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 42% 95%;
+    --muted-foreground: 180 10% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 42% 89%;
+    --accent-foreground: 180 59% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 45 100% 51%;
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 180 59% 11%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 45 42% 98%;
+    --sidebar-foreground: 180 20% 15%;
+    --sidebar-primary: 180 59% 11%;
+    --sidebar-primary-foreground: 45 42% 89%;
+    --sidebar-accent: 45 42% 95%;
+    --sidebar-accent-foreground: 180 59% 11%;
+    --sidebar-border: 45 20% 88%;
+    --sidebar-ring: 180 59% 11%;
   }
 }
 
@@ -70,7 +70,7 @@
   }
 }
 
-/* Premium animations */
+/* Professional animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -112,59 +112,80 @@
   animation: slideInRight 0.4s ease-out;
 }
 
-/* Premium gradient backgrounds */
+/* Professional gradient backgrounds */
 .bg-gradient-primary {
-  background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+  background: linear-gradient(135deg, #0C2A28 0%, #CD5B43 100%);
 }
 
 .bg-gradient-secondary {
-  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  background: linear-gradient(135deg, #CD5B43 0%, #0C2A28 100%);
 }
 
 .bg-gradient-light {
-  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  background: linear-gradient(135deg, #E4E1B6 0%, #F8F6E8 100%);
 }
 
-/* Premium scrollbar */
+/* Professional scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F3F4F6;
+  background: #E4E1B6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #F59E0B, #EA580C);
+  background: linear-gradient(135deg, #0C2A28, #CD5B43);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #D97706, #DC2626);
+  background: linear-gradient(135deg, #CD5B43, #0C2A28);
 }
 
-/* Premium glass effect */
+/* Professional glass effect */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(12, 42, 40, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(228, 225, 182, 0.2);
 }
 
-/* Premium shadows */
+/* Professional shadows */
 .shadow-premium {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(12, 42, 40, 0.25);
 }
 
 .shadow-premium-sm {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(12, 42, 40, 0.1);
 }
 
-/* Premium button hover effects */
+/* Professional button hover effects */
 .btn-premium {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-premium:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(12, 42, 40, 0.1), 0 10px 10px -5px rgba(12, 42, 40, 0.04);
+}
+
+/* Professional color utilities */
+.text-primary-dark {
+  color: #0C2A28;
+}
+
+.text-accent-warm {
+  color: #CD5B43;
+}
+
+.bg-cream {
+  background-color: #E4E1B6;
+}
+
+.border-primary-dark {
+  border-color: #0C2A28;
+}
+
+.border-accent-warm {
+  border-color: #CD5B43;
 }
