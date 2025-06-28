@@ -13,12 +13,12 @@ const PropertyActions: React.FC = () => {
   };
 
   return (
-    <Card className="shadow-lg border-0">
+    <Card className="shadow-lg border-slate-200 bg-white">
       <CardContent className="p-6">
         <div className="space-y-4">
           <Button 
             onClick={handleScheduleViewing}
-            className="w-full bg-gradient-primary hover:shadow-lg text-white font-semibold text-lg py-6 btn-premium"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg py-6"
           >
             Schedule Viewing
           </Button>

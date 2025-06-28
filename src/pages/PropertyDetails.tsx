@@ -70,7 +70,7 @@ const PropertyDetails = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -108,7 +108,7 @@ const PropertyDetails = () => {
             />
 
             {/* Map */}
-            <Card className="shadow-lg border-0">
+            <Card className="shadow-lg border-slate-200 bg-white">
               <CardHeader>
                 <CardTitle className="text-slate-900">Location</CardTitle>
               </CardHeader>

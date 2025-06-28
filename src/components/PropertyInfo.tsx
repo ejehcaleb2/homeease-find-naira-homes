@@ -30,7 +30,7 @@ const PropertyInfo: React.FC<PropertyInfoProps> = ({
   return (
     <div className="space-y-6">
       {/* Property Header */}
-      <Card className="shadow-lg border-0">
+      <Card className="shadow-lg border-slate-200 bg-white">
         <CardContent className="p-6">
           <div className="flex justify-between items-start mb-4">
             <div>
@@ -81,14 +81,14 @@ const PropertyInfo: React.FC<PropertyInfoProps> = ({
             </div>
             <div>
               <span className="text-sm text-slate-500">Status</span>
-              <Badge className="bg-green-500 text-white border-green-500 hover:bg-green-600">Available</Badge>
+              <Badge className="bg-green-600 text-white border-green-600 hover:bg-green-700">Available</Badge>
             </div>
           </div>
         </CardContent>
       </Card>
 
       {/* Description */}
-      <Card className="shadow-lg border-0">
+      <Card className="shadow-lg border-slate-200 bg-white">
         <CardContent className="p-6">
           <h3 className="text-xl font-semibold text-slate-900 mb-4">Description</h3>
           <p className="text-slate-700 leading-relaxed">{description}</p>

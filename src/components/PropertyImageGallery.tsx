@@ -36,7 +36,7 @@ const PropertyImageGallery: React.FC<PropertyImageGalleryProps> = ({ images, tit
             <Button 
               size="sm"
               onClick={handleShare}
-              className="absolute top-4 right-4 bg-white/90 text-slate-700 hover:bg-white border border-slate-200 shadow-lg"
+              className="absolute top-4 right-4 bg-white text-slate-700 hover:bg-slate-50 border border-slate-200 shadow-lg"
             >
               <Share className="w-4 h-4 mr-2" />
               Share

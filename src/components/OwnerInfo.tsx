@@ -26,18 +26,18 @@ const OwnerInfo: React.FC<OwnerInfoProps> = ({ owner }) => {
   };
 
   return (
-    <Card className="shadow-lg border-0">
+    <Card className="shadow-lg border-slate-200 bg-white">
       <CardHeader>
         <CardTitle className="text-slate-900">Property Owner</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-gradient-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold shadow-lg">
+          <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">
             {owner.name.charAt(0)}
           </div>
           <h3 className="font-semibold text-lg text-slate-900">{owner.name}</h3>
           {owner.verified && (
-            <Badge className="bg-green-500 text-white border-green-500 hover:bg-green-600 mt-2">
+            <Badge className="bg-green-600 text-white border-green-600 hover:bg-green-700 mt-2">
               Verified Owner
             </Badge>
           )}

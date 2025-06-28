@@ -15,7 +15,7 @@ interface PropertyAmenitiesProps {
 
 const PropertyAmenities: React.FC<PropertyAmenitiesProps> = ({ amenities, features }) => {
   return (
-    <Card className="shadow-lg border-0">
+    <Card className="shadow-lg border-slate-200 bg-white">
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold text-slate-900 mb-6">Features & Amenities</h3>
         
@@ -25,7 +25,7 @@ const PropertyAmenities: React.FC<PropertyAmenitiesProps> = ({ amenities, featur
               key={name}
               className={`flex items-center p-3 rounded-lg border transition-colors ${
                 available 
-                  ? 'bg-gradient-primary text-white border-blue-600 shadow-md' 
+                  ? 'bg-blue-600 text-white border-blue-600' 
                   : 'bg-slate-50 text-slate-600 border-slate-200'
               }`}
             >
@@ -40,7 +40,7 @@ const PropertyAmenities: React.FC<PropertyAmenitiesProps> = ({ amenities, featur
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
                 <span className="text-slate-700">{feature}</span>
               </div>
             ))}
