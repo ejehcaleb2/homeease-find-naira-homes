@@ -38,7 +38,7 @@ const PropertyDetails = () => {
     area: "85 sqm",
     yearBuilt: 2020,
     propertyType: "Apartment",
-    description: "This stunning modern 2-bedroom apartment offers luxurious living in the heart of Victoria Island. Featuring contemporary design, premium finishes, and breathtaking city views, this property is perfect for professionals and small families seeking comfort and convenience.",
+    description: "This stunning modern 2-bedroom apartment offers luxurious living in the heart of Victoria Island. Featuring contemporary design, premium finishes, and breathtaking city views, this property is perfect for professionals and small families seeking comfort and convenience in Nigeria's business capital.",
     features: [
       "Air Conditioning",
       "Fully Equipped Kitchen",
@@ -70,7 +70,7 @@ const PropertyDetails = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#E4E1B6' }}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -78,7 +78,7 @@ const PropertyDetails = () => {
         <Button 
           variant="outline" 
           onClick={() => navigate(-1)}
-          className="mb-6 border-[#0C2A28] text-[#0C2A28] hover:bg-[#0C2A28] hover:text-[#E4E1B6] bg-transparent"
+          className="mb-6 border-slate-300 text-slate-700 hover:bg-slate-50 bg-white"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Listings
@@ -108,15 +108,15 @@ const PropertyDetails = () => {
             />
 
             {/* Map */}
-            <Card className="bg-[#E4E1B6] border-[#0C2A28]">
+            <Card className="shadow-lg border-0">
               <CardHeader>
-                <CardTitle className="text-[#0C2A28]">Location</CardTitle>
+                <CardTitle className="text-slate-900">Location</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="h-96 rounded-lg overflow-hidden">
+                <div className="h-96 rounded-lg overflow-hidden shadow-md">
                   <Map coordinates={property.coordinates} address={property.address} />
                 </div>
-                <p className="text-[#0C2A28] mt-4">{property.address}</p>
+                <p className="text-slate-700 mt-4">{property.address}</p>
               </CardContent>
             </Card>
           </div>

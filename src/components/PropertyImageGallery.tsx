@@ -11,6 +11,18 @@ interface PropertyImageGalleryProps {
 const PropertyImageGallery: React.FC<PropertyImageGalleryProps> = ({ images, title }) => {
   const [selectedImage, setSelectedImage] = useState(0);
 
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        text: `Check out this amazing property: ${title}`,
+        url: window.location.href
+      });
+    } else {
+      alert("COMING SOON: Enhanced sharing options will be available soon!");
+    }
+  };
+
   return (
     <div className="mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -19,11 +31,12 @@ const PropertyImageGallery: React.FC<PropertyImageGalleryProps> = ({ images, tit
             <img 
               src={images[selectedImage]} 
               alt={title}
-              className="w-full h-96 lg:h-[500px] object-cover rounded-lg"
+              className="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
             />
             <Button 
               size="sm"
-              className="absolute top-4 right-4 bg-[#E4E1B6]/90 text-[#0C2A28] hover:bg-[#E4E1B6] border border-[#0C2A28]"
+              onClick={handleShare}
+              className="absolute top-4 right-4 bg-white/90 text-slate-700 hover:bg-white border border-slate-200 shadow-lg"
             >
               <Share className="w-4 h-4 mr-2" />
               Share
@@ -36,7 +49,7 @@ const PropertyImageGallery: React.FC<PropertyImageGalleryProps> = ({ images, tit
               key={index + 1}
               src={image} 
               alt={`${title} ${index + 2}`}
-              className="w-full h-24 lg:h-[115px] object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+              className="w-full h-24 lg:h-[115px] object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity shadow-md"
               onClick={() => setSelectedImage(index + 1)}
             />
           ))}
@@ -49,7 +62,7 @@ const PropertyImageGallery: React.FC<PropertyImageGalleryProps> = ({ images, tit
             src={image} 
             alt={`${title} ${index + 1}`}
             className={`w-20 h-16 object-cover rounded cursor-pointer transition-all ${
-              selectedImage === index ? 'ring-2 ring-[#0C2A28]' : 'hover:opacity-80'
+              selectedImage === index ? 'ring-2 ring-blue-600 shadow-md' : 'hover:opacity-80'
             }`}
             onClick={() => setSelectedImage(index)}
           />
