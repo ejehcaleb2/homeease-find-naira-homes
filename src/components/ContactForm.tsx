@@ -27,9 +27,9 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Card className="bg-[#E4E1B6] border-[#0C2A28]">
+    <Card className="bg-slate-50 border-slate-200 shadow-lg">
       <CardHeader>
-        <CardTitle className="text-[#0C2A28]">Send Message</CardTitle>
+        <CardTitle className="text-slate-900">Send Message</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleContactSubmit} className="space-y-4">
@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
             value={contactForm.name}
             onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
             required
-            className="border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60 bg-[#E4E1B6]"
+            className="border-slate-300 focus:border-blue-500 text-slate-900 placeholder:text-slate-500 bg-white"
           />
           <Input
             type="email"
@@ -46,25 +46,25 @@ const ContactForm: React.FC = () => {
             value={contactForm.email}
             onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
             required
-            className="border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60 bg-[#E4E1B6]"
+            className="border-slate-300 focus:border-blue-500 text-slate-900 placeholder:text-slate-500 bg-white"
           />
           <Input
             type="tel"
             placeholder="Your Phone"
             value={contactForm.phone}
             onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
-            className="border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60 bg-[#E4E1B6]"
+            className="border-slate-300 focus:border-blue-500 text-slate-900 placeholder:text-slate-500 bg-white"
           />
           <Textarea
             placeholder="Your message..."
             value={contactForm.message}
             onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-            className="min-h-[100px] border-[#0C2A28] focus:border-[#CD5B43] text-[#0C2A28] placeholder:text-[#0C2A28]/60 bg-[#E4E1B6]"
+            className="min-h-[100px] border-slate-300 focus:border-blue-500 text-slate-900 placeholder:text-slate-500 bg-white"
             required
           />
           <Button 
             type="submit" 
-            className="w-full bg-[#CD5B43] hover:bg-[#CD5B43]/90 text-[#E4E1B6] border-[#CD5B43]"
+            className="w-full bg-gradient-primary hover:opacity-90 text-white shadow-lg btn-premium"
           >
             Send Message
           </Button>
