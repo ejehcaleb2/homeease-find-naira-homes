@@ -242,7 +242,7 @@ const Agents = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center justify-center mb-4">
                     <div className="flex items-center mr-4">
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star className="w-5 h-5 text-blue-500 fill-current" />
                       <span className="font-bold text-slate-900 ml-1">{agent.rating}</span>
                       <span className="text-slate-500 text-sm ml-1">({agent.reviews} reviews)</span>
                     </div>

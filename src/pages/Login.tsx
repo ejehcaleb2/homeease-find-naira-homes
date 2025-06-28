@@ -55,12 +55,12 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-light flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="mb-8">
           <Link 
             to="/" 
-            className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to HomeEase
@@ -125,7 +125,7 @@ const Login = () => {
             <div className="mt-6 text-center">
               <p className="text-gray-600">
                 Don't have an account?{' '}
-                <Link to="/register" className="text-primary hover:text-primary/80 font-medium">
+                <Link to="/register" className="text-blue-600 hover:text-blue-800 font-medium">
                   Sign Up
                 </Link>
               </p>

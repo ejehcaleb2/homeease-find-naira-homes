@@ -20,6 +20,7 @@ const Listings = () => {
     amenities: []
   });
   const [showFilters, setShowFilters] = useState(false);
+  const [displayCount, setDisplayCount] = useState(12);
 
   // Sample property data - in a real app, this would come from an API
   const properties = [
@@ -371,6 +372,9 @@ const Listings = () => {
     return matchesLocation && matchesPrice && matchesBedrooms;
   });
 
+  const displayedProperties = filteredProperties.slice(0, displayCount);
+  const hasMoreProperties = displayCount < filteredProperties.length;
+
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
@@ -460,7 +464,7 @@ const Listings = () => {
 
         {/* Properties Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProperties.map((property) => (
+          {displayedProperties.map((property) => (
             <Card key={property.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden bg-white border-slate-200">
               <div className="relative">
                 <img 
@@ -542,15 +546,16 @@ const Listings = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-12">
-          <Button 
-            size="lg"
-            variant="outline"
-            className="px-8 border-slate-300 text-slate-700 hover:bg-slate-50"
-          >
-            Load More Properties
-          </Button>
-        </div>
+        {hasMoreProperties && (
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => setDisplayCount(displayCount + 12)}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+            >
+              Load More Properties
+            </Button>
+          </div>
+        )}
       </div>
 
       <Footer />

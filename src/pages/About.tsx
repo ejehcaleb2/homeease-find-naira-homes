@@ -70,18 +70,18 @@ const About = () => {
                 eliminating unnecessary costs and complications.
               </p>
             </div>
-            <div className="bg-gradient-light rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8">
               <div className="space-y-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
                   <div className="text-gray-600">Verified Properties</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-secondary mb-2">1,200+</div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">1,200+</div>
                   <div className="text-gray-600">Happy Tenants</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">₦0</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">₦0</div>
                   <div className="text-gray-600">Agent Fees</div>
                 </div>
               </div>
