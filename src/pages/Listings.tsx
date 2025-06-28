@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -373,40 +372,40 @@ const Listings = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">
             Browse Properties
           </h1>
-          <p className="text-gray-600">
+          <p className="text-slate-600">
             {filteredProperties.length} properties found
           </p>
         </div>
 
         {/* Search and Filter Bar */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+        <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-6 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                 <Input
                   placeholder="Search by location..."
                   value={filters.location}
                   onChange={(e) => setFilters({...filters, location: e.target.value})}
-                  className="pl-10"
+                  className="pl-10 border-slate-300 focus:border-blue-500 text-slate-900"
                 />
               </div>
             </div>
             
             <Select value={filters.propertyType} onValueChange={(value) => setFilters({...filters, propertyType: value})}>
-              <SelectTrigger className="w-full lg:w-48">
+              <SelectTrigger className="w-full lg:w-48 border-slate-300 focus:border-blue-500 text-slate-900">
                 <SelectValue placeholder="Property type" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white border-slate-200">
                 <SelectItem value="room">Room</SelectItem>
                 <SelectItem value="self-contained">Self Contained</SelectItem>
                 <SelectItem value="1-bedroom">1 Bedroom</SelectItem>
@@ -416,10 +415,10 @@ const Listings = () => {
             </Select>
 
             <Select value={filters.bedrooms} onValueChange={(value) => setFilters({...filters, bedrooms: value})}>
-              <SelectTrigger className="w-full lg:w-32">
+              <SelectTrigger className="w-full lg:w-32 border-slate-300 focus:border-blue-500 text-slate-900">
                 <SelectValue placeholder="Beds" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white border-slate-200">
                 <SelectItem value="1">1 Bed</SelectItem>
                 <SelectItem value="2">2 Beds</SelectItem>
                 <SelectItem value="3">3 Beds</SelectItem>
@@ -430,7 +429,7 @@ const Listings = () => {
             <Button 
               variant="outline" 
               onClick={() => setShowFilters(!showFilters)}
-              className="lg:w-auto"
+              className="lg:w-auto border-slate-300 text-slate-700 hover:bg-slate-50"
             >
               <Filter className="w-4 h-4 mr-2" />
               More Filters
@@ -439,10 +438,10 @@ const Listings = () => {
 
           {/* Advanced Filters */}
           {showFilters && (
-            <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="mt-6 pt-6 border-t border-slate-200">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
                     Price Range: ₦{filters.priceRange[0].toLocaleString()} - ₦{filters.priceRange[1].toLocaleString()}
                   </label>
                   <Slider
@@ -462,7 +461,7 @@ const Listings = () => {
         {/* Properties Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProperties.map((property) => (
-            <Card key={property.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <Card key={property.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden bg-white border-slate-200">
               <div className="relative">
                 <img 
                   src={property.image} 
@@ -475,7 +474,7 @@ const Listings = () => {
                   {property.tag}
                 </Badge>
                 <button className="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
-                  <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
+                  <Heart className="w-4 h-4 text-slate-600 hover:text-red-500 transition-colors" />
                 </button>
                 {property.isAvailable && (
                   <Badge className="absolute bottom-3 left-3 bg-green-500 text-white">
@@ -485,16 +484,16 @@ const Listings = () => {
               </div>
               
               <CardContent className="p-6">
-                <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-semibold text-lg text-slate-900 mb-2 group-hover:text-primary transition-colors">
                   {property.title}
                 </h3>
                 
-                <div className="flex items-center text-gray-600 mb-3">
+                <div className="flex items-center text-slate-600 mb-3">
                   <MapPin className="w-4 h-4 mr-1" />
                   <span className="text-sm">{property.location}</span>
                 </div>
 
-                <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
+                <div className="flex items-center justify-between text-sm text-slate-600 mb-4">
                   <div className="flex items-center">
                     <Bed className="w-4 h-4 mr-1" />
                     <span>{property.bedrooms}</span>
@@ -511,12 +510,12 @@ const Listings = () => {
 
                 <div className="flex flex-wrap gap-1 mb-4">
                   {property.amenities.slice(0, 3).map((amenity, index) => (
-                    <Badge key={index} variant="secondary" className="text-xs">
+                    <Badge key={index} variant="secondary" className="text-xs bg-slate-100 text-slate-700">
                       {amenity}
                     </Badge>
                   ))}
                   {property.amenities.length > 3 && (
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge variant="secondary" className="text-xs bg-slate-100 text-slate-700">
                       +{property.amenities.length - 3} more
                     </Badge>
                   )}
@@ -527,7 +526,7 @@ const Listings = () => {
                     <span className="text-2xl font-bold text-primary">
                       ₦{property.price.toLocaleString()}
                     </span>
-                    <span className="text-gray-600 text-sm">/month</span>
+                    <span className="text-slate-600 text-sm">/month</span>
                   </div>
                   <Button 
                     size="sm" 
@@ -547,7 +546,7 @@ const Listings = () => {
           <Button 
             size="lg"
             variant="outline"
-            className="px-8"
+            className="px-8 border-slate-300 text-slate-700 hover:bg-slate-50"
           >
             Load More Properties
           </Button>
