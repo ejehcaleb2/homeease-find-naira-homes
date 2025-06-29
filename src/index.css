@@ -170,6 +170,10 @@
   background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
 }
 
+.bg-gradient-light {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
 /* Professional scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
